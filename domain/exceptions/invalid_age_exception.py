@@ -1,0 +1,2 @@
+class InvalidAgeException(Exception):
+    pass

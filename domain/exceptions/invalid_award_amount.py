@@ -1,0 +1,2 @@
+class InvalidAwardAmountException(Exception):
+    pass
