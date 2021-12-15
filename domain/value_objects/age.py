@@ -1,11 +1,12 @@
 from domain.exceptions.invalid_age_exception import InvalidAgeException
+from dataclasses import dataclass
 
 
+@dataclass
 class Age:
     value: int
 
-    def __init__(self, value):
-        self.value = value
+    def __post_init__(self):
         self.validate()
 
     def validate(self):

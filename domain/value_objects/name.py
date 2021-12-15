@@ -1,13 +1,13 @@
 from domain.exceptions.invalide_name_exception import InvalidNameException
+from dataclasses import dataclass
 
 
+@dataclass
 class Name:
     first: str
     last: str
 
-    def __init__(self, first:str, last:str):
-        self.first = first
-        self.last = last
+    def __post_init__(self):
         self.validate()
 
     def validate(self):

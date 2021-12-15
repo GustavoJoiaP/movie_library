@@ -4,6 +4,7 @@ from domain.entities.director import Director
 from domain.value_objects.age import Age
 from domain.value_objects.award_amount import AwardAmount
 from domain.value_objects.name import Name
+from domain.value_objects.person_genre import PersonGenre
 
 
 class TestDirector(TestCase):
@@ -16,9 +17,11 @@ class TestDirector(TestCase):
         name = Name(first_name, last_name)
         award_amount_value = 2
         award_amount = AwardAmount(award_amount_value)
+        director_genre_value = 'female'
+        director_genre = PersonGenre(director_genre_value)
 
         #Action
-        director = Director(name, age, award_amount)
+        director = Director(name, age, award_amount, director_genre)
 
         #Assert
         self.assertIsInstance(director, Director)
