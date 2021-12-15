@@ -9,9 +9,9 @@ from domain.value_objects.movie_genre import MovieGenre
 class Movie:
     title: str
     genre: MovieGenre
-    actor: Actor
-    director: Director
-    producer: Producer
+    actor: list[Actor]
+    director: list[Director]
+    producer: list[Producer]
 
     def __init__(self, title: str, genre: MovieGenre, actor: Actor, director: Director, producer: Producer):
         self.title = title
